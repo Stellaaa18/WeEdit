@@ -1,0 +1,15 @@
+<view>
+
+   <view class="view-row"  wx:for="{{[1,2]}}" wx:for-index="i" wx:for-item="row"  ></view>
+         
+<block  wx:for="{{[1,2]}}" wx:for-index="j" wx:for-item="column" > 
+
+<block  wx:if="{{i<=j}}"> 
+     <view class="view-item"> {{row}}*{{column}}={{row*column}} </view>
+       </block>
+                 </block>
+</view>
+
+
+
+

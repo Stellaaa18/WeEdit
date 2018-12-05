@@ -1,0 +1,13 @@
+.view-row{
+display: flex;
+flex-direction: row;
+}
+
+.view-item{
+display: flex;
+align-items: center;  /**横纵向居中*/
+justify-content: center;
+padding:5px;
+margin:5px;   
+
+}

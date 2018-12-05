@@ -1,0 +1,64 @@
+<!--pages/viewer/viewer.wxml-->
+<view class="container">
+  <view class="article">
+    <view class="title">
+      <text>知天下，为什么美国数学很简，做的东西却比我们好？</text>
+    </view>
+    <view class="author-info">
+      <text class="author-name">Dave Cheng</text>
+      <text class="author-mark">，矮油</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <text>还有一些可能会毁了你“三观”的内容——很多南沙小国其实不怕中国，他们占着绝大多数南沙岛屿;中国的出生率确实在下降，可是和计划生育无关;白宫的政治也是利益为先，所以根本不会搭理外国人的网络请愿……
+            </text>
+    <view class="footer">
+      <view class="operation">
+        <view class="list-container" data-index="{{index}}" bindtap="edit">
+          <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+          <navigator class='link'>编辑</navigator>
+        </view>
+        <view class="list-container" data-index="{{index}}" bindtap="sign">
+          <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+          <navigator class='link'>标注</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <text>还有一些可能会毁了你“三观”的内容——很多南沙小国其实不怕中国，他们占着绝大多数南沙岛屿;中国的出生率确实在下降，可是和计划生育无关;白宫的政治也是利益为先，所以根本不会搭理外国人的网络请愿……
+            </text>
+    <view class="footer">
+      <view class="operation">
+        <view class="list-container" data-index="{{index}}" bindtap="edit">
+          <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+          <navigator class='link'>编辑</navigator>
+        </view>
+        <view class="list-container" data-index="{{index}}" bindtap="sign">
+          <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+          <navigator class='link'>标注</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="comment">
+    <view class="title">
+      <text>反馈列表</text>
+    </view>
+    <view class="judgement">
+      <text>还有一些可能会毁了你“三观”的内容——很多南沙小国其实不怕中国，他们占着绝大多数南沙岛屿;中国的出生率确实在下降，可是和计划生育无关;白宫的政治也是利益为先，所以根本不会搭理外国人的网络请愿……
+            </text>
+    </view>
+    <view class="footer">
+      <view class="operation">
+        <view class="list-container" data-index="{{index}}" bindtap="commit">
+          <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>应用</navigator> -->
+          <navigator class='link'>应用</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

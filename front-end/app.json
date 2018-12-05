@@ -1,0 +1,46 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/me/me",
+    "pages/Vote/Vote",
+    "pages/Sign/Sign",
+    "pages/publish/publish",
+    "pages/message/message",
+    "pages/practice/practice",
+    "pages/Edit/Edit",
+    "pages/Votes/Votes"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#494949",
+    "navigationBarTitleText": "WeEdit",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#cc1004",
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/image/海报/主页（灰）.png",
+        "selectedIconPath": "/image/海报/主页（橙）.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "发布",
+        "iconPath": "/image/海报/文件（灰）.png",
+        "selectedIconPath": "/image/海报/文件（橙）.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/image/海报/我（灰）.png",
+        "selectedIconPath": "/image/海报/我（橙）.png"
+      }
+    ]
+  }
+}

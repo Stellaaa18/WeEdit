@@ -1,0 +1,47 @@
+<view>
+  <view class="row">
+  <view class="title">事件名</view>
+  <view class="info">
+  <input class="info-input"  bindinput="handleMessageChange" placeholder="2~100个字"/>
+  </view>
+  </view>
+  
+  <view class="row">
+  <label class="title">事件地点</label>
+  <view class="info">
+  <input class="info-input"  bindinput="handleAddressChange" placeholder="2~100个字"/>
+</view></view>
+
+ <view class="row">
+   <picker mode="date" value="{{date}}" start="1978-01-01" end="2020-1-23" bindchange="bindDateChange">  
+     <view class="title">
+     日期
+     </view>
+     <view class="info">{{dates}}</view>
+  </picker>  
+    </view>
+
+  <view class="row">
+   <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+     <view class="title">
+     时间
+     </view>
+     <view class="info">{{times}}</view>
+  </picker>  
+    </view>
+
+
+
+
+<view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+<view class="ad_popFt">
+    
+   
+      <textarea class="ad_popArea" bindinput="commentTxtFn" focus="{{isPopOpen}}"
+      
+       placeholder="请输入事件内容，2-10000字"  placeholder-style="color:#cccccc;" name="textarea" />
+ 
+</view>
+
+  <view class="submit-button" bindtap='handleSubmit'>发布</view>
+</view>

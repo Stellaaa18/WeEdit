@@ -1,0 +1,115 @@
+/* pages/viewer/viewer.wxss */
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/*article*/
+.article {
+    padding: 20rpx;
+    background: #FFF;
+    margin-bottom:20rpx;
+}
+
+.article .title {
+    padding-bottom: 30rpx;
+    font-size: 46rpx;
+    font-weight: bold
+}
+
+.article .author-info {
+    overflow: hidden;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 35rpx;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    color: #6A6A6A;
+}
+
+.content{
+  padding: 20rpx;
+  background: #FFF;
+  margin-bottom:20rpx;
+}
+
+.content text {
+    display: block;
+    font-size: 35rpx;
+    color: #6A6A6A;
+    line-height: 60rpx;
+    margin-bottom: 20rpx;
+    text-align: justify;
+    overflow: hidden;
+    word-wrap:  break-word; 
+}
+
+.container{
+  padding:15rpx;
+  box-sizing:border-box;
+  margin-bottom:20rpx;
+}
+
+.container .footer {
+	border-top: 1px solid #ccc;
+	font-size: 30rpx;
+	color: #999;
+	padding-left: 450rpx;
+	padding-top: 10rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.container .footer .operation {
+	display: flex;
+}
+
+.container .footer .operation .list-container {
+	display: flex;
+	align-items: center;
+  width: 3rem;
+  color:#6A6A6A;
+}
+
+.comment{
+  padding: 20rpx;
+  background: #FFF;
+  margin-bottom:20rpx;
+}
+
+.comment .title {
+  display:block;
+  padding: 10rpx;
+  margin-bottom:20rpx;
+}
+
+.comment .title text{
+  color:black;
+  font-size: 46rpx;
+  font-weight: bold;
+}
+
+.comment .judgement text{
+  display: block;
+  font-size: 35rpx;
+  color: #6A6A6A;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+  text-align: justify;
+  overflow: hidden;
+  word-wrap:  break-word; 
+}
+
+.comment .footer {
+	border-top: 1px solid #ccc;
+	font-size: 30rpx;
+	color: #999;
+	padding-left: 580rpx;
+	padding-top: 10rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

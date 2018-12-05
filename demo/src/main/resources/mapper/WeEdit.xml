@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.demo.dao.WeEdit">
+	<select id="queryConditionBy2ID" resultType="com.imooc.demo.entity.UserCondition">
+		SELECT * 
+		FROM user_condition 
+		WHERE voteID=#{voteID} AND userID=#{userID}
+	</select>
+	
+	<select id="queryConditionBy3ID" resultType="com.imooc.demo.entity.UserCondition">
+		SELECT *
+		FROM user_condition
+		WHERE
+		voteID=#{voteID} AND userID=#{userID} AND choiceNumber=#{choiceNumber}
+	</select>
+	
+	
+	<select id="queryCountByID" resultType="com.imooc.demo.entity.VoteChoice">
+		SELECT *
+		FROM vote_choice
+		WHERE
+		voteID = #{voteID} 
+		AND 
+		choiceNumber = 
+		#{choiceNumber}
+	</select>
+	
+	
+	<select id="queryVoteInfoById" resultType="com.imooc.demo.entity.VoteInfo">
+		SELECT *
+		FROM vote_infomation
+		WHERE
+		voteID =#{voteID}
+	</select>
+	
+	<insert id="insertVoteInfo" useGeneratedKeys="true" keyProperty="voteInfoId"
+		keyColumn="voteID" parameterType="com.imooc.demo.entity.VoteInfo">
+		INSERT INTO
+		vote_infomation(userID,launchTime,deadLine,isFaceless,voteAttri,groupID)
+		VALUES
+		(#{userID},#{launchTime},#{deadLine},#{isFaceless},#{voteAttri},#{groupID})
+	</insert>
+	
+	<update id="updateCount" parameterType="com.imooc.demo.entity.VoteChoice">
+		UPDATE vote_choice  
+		SET choiceCount=#{count} 
+		WHERE voteID=#{voteID} AND choiceNumber=#{choiceNumber}
+	</update>
+	
+	<delete id="deleteVoteInfo">
+		DELETE FROM
+		vote_infomation
+		WHERE
+		voteID =
+		#{voteInfoId}
+	</delete>
+	
+	<insert id="insertChoice" useGeneratedKeys="true" keyProperty="voteID"
+		keyColumn="voteID" parameterType="com.imooc.demo.entity.VoteChoice">
+		INSERT INTO
+		vote_choice(voteID,choice,choiceCount,choiceNumber)
+		VALUES
+		(#{voteID},#{choice},#{choiceCount},#{choiceNumber})
+	</insert>
+	
+	<insert id="insertVoteComm" useGeneratedKeys="true"  parameterType="com.imooc.demo.entity.VoteComm">
+		INSERT INTO
+		vote_comm(voteID,userID,comment)
+		VALUES
+		(#{voteID},#{userID},#{comment})
+	</insert>
+	
+	<insert id="insertUserCondition" useGeneratedKeys="true"  parameterType="com.imooc.demo.entity.UserCondition">
+		INSERT INTO
+		user_condition(voteID,userID,choiceNumber,voteTime)
+		VALUES
+		(#{voteID},#{userID},#{choiceNumber},#{voteTime})
+	</insert>
+	
+	<insert id="insertGroup" useGeneratedKeys="true"  parameterType="com.imooc.demo.entity.UserGroup">
+		INSERT INTO
+		user_group(createTime,size)
+		VALUES
+		(#{createTime},#{size})
+	</insert>
+	
+	<insert id="insertMember" useGeneratedKeys="true"  parameterType="com.imooc.demo.entity.GroupMember">
+		INSERT INTO
+		group_member(groupID,userID,addTime,level)
+		VALUES
+		(#{groupID},#{userID},#{addTime},#{level})
+	</insert>
+	
+	<select id="queryGroupByUserID" resultType="com.imooc.demo.entity.GroupMember">
+		SELECT *
+		FROM group_member
+		WHERE
+		userID =#{userID}
+	</select>
+	
+	<select id="queryVoteInfoByGroupID" resultType="com.imooc.demo.entity.VoteInfo">
+		SELECT *
+		FROM vote_infomation
+		WHERE
+		groupID =#{groupID}
+	</select>
+	
+	<delete id="deleteGroup">
+		DELETE FROM
+		user_group
+		WHERE
+		groupID =
+		#{groupID}
+	</delete>
+	
+	<delete id="deleteMember">
+		DELETE FROM
+		groupMember
+		WHERE
+		groupID =
+		#{groupID} AND userID=#{userID}
+	</delete>
+	
+	<select id="queryGroupSize" resultType="int">
+		SELECT size
+		FROM user_group
+		WHERE
+		groupID =#{groupID}
+	</select>
+	
+	<update id="updateGroupSize" parameterType="com.imooc.demo.entity.UserGroup">
+		UPDATE user_group  
+		SET size=#{size} 
+		WHERE groupID=#{groupID}
+	</update>
+</mapper>
+    

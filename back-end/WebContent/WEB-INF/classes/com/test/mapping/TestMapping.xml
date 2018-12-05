@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.test.dao.ITestDao">
+	<resultMap id="BaseResultMap" type="com.test.pojo.TestPojo">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="test_user_name" property="testUserName" jdbcType="VARCHAR" />
+		<result column="test_password" property="testPassword" jdbcType="VARCHAR" />
+		<result column="test_age" property="testAge" jdbcType="INTEGER" />
+	</resultMap>
+
+	<select id="getTestPojo" resultMap="BaseResultMap">
+		select * from test_table limit 0,1
+	</select>
+
+</mapper>

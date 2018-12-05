@@ -1,0 +1,69 @@
+<!--pages/Votes/Votes.wxml-->
+
+<form bindsubmit="goDetail"   >
+ <view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+<view class="ad_popFt">
+  
+   
+      <textarea class="ad_popArea"   name="Votename"  bindinput="commentTxtFn" focus="{{isPopOpen}}"
+      
+       placeholder="输入事件名"  placeholder-style="color:#cccccc;"   value="{{Votename}}"   />
+ </view>
+
+ <block wx:for="{{lists}}" wx:key="{{index}}">
+      <!--input class='create-li' data-id="{{index}}" placeholder="选项"  bindinput='bindKeyInput'></input-->
+
+
+ <view class="row">
+  <view class="title">选项{{index}}</view>
+  <view class="info">
+  <input class="info-input"  name="Input" value="{{Input}}"  bindinput="bindKeyInput" placeholder="{{index}}">  </input>
+  <icon class="flex-row" type="cancel" color="red"  bindtap='delList'></icon>
+ </view>
+  </view>
+
+
+    </block> 
+    <button class='add-li' bindtap='addList'>添加选项</button>
+
+
+
+
+<view class="row">
+    <picker bindchange="bindPickerChange"  name="Type" value="{{index}}"   range="{{array}}">
+          <view class="title">
+            投票类型: {{array[index]}}
+        </view>
+    </picker>
+</view>
+ <view class="row">
+   <picker mode="date"   name="Vote_date" value="{{date}}" start="1978-01-01" end="2020-1-23" bindchange="bindDateChange">  
+     <view class="title">
+     结束日期
+     </view>
+     <view class="info">{{dates}}</view>
+  </picker>  
+    </view>
+
+  <view class="row">
+   <picker mode="time"   name="Vote_time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+     <view class="title">
+     结束时间
+     </view>
+     <view class="info">{{times}}</view>
+  </picker>  
+    </view>
+
+
+<view class='middle'>
+ <view class='private'>
+    <view class='title'>匿名</view>
+    <switch  name="Private" bindchange="setPrivate" value="{{Private}}" color='#09bb07'/>
+  </view>
+
+</view>
+
+   <button class="informBtn" form-type="submit">确认发布</button>
+ 
+</form>
+ 

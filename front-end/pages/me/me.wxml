@@ -1,0 +1,55 @@
+<!--pages/me/me.wxml-->
+<view>
+
+<view class="contianer">
+<icon  type='success' size="30" color='#FF4040'></icon>
+
+<view>     {{message}} </view>
+
+
+
+<view  id="item-{{id}}">  测试逐渐的属性绑定。    </view>
+
+<view     class="sub-view"  wx:if="{{condition}}">
+
+测试控制条件绑定。
+</view>
+
+
+
+<view   class="sub-view"   wx:if="{{true}}"  >     测试关键字使用。</view>
+
+<view  class="sub-view"    hidden="{{flag ?true:flase}}">  测试三目运算  </view>
+
+<view  class="sub-view">  {{a+b-c*2}}+{{c}}+c     </view>
+
+
+<view    class="sub-view">  测试数据路径运算：对象属性{{object.key}}+数组元素{{array[0]}}  </view>
+
+
+<view class="sub-view"> 测试组合操作：  {{[zero,1,2,3,4,5,0]}}    </view>
+
+
+<view wx:if="{{conditions<10}}">  wx:if</view>
+<view wx:elif="{{conditions==10}}">  wx:elif</view>
+<view wx:else>  wx:else</view>
+
+    </view>
+</view>
+
+<view>
+
+   <view class="view-row"  wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-index="i" wx:for-item="row"  ></view>
+         
+<block  wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-index="j" wx:for-item="column" >
+       
+<block  wx:if="{{j<=i}}">
+
+     <view class="view-item">  {{row}}*{{column}}={{row*column}} </view>
+       </block>
+                 </block>
+</view>
+
+
+
+

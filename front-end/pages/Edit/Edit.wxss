@@ -1,0 +1,58 @@
+/* pages/Edit/Edit.wxss */
+page{
+  background: #eee;
+}
+
+
+
+
+.row{
+  overflow: hidden;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  color: #0c0c0c;
+}
+
+.rows{
+  overflow: hidden;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  color: #0c0c0c;
+}
+
+.submit-button{
+  margin: 10px 8px 0 8px;
+  background: #09bb07;
+  line-height: 38px;
+  border-radius: :6px;
+  text-align: center;
+  color: #fff;
+}
+
+.title{
+  padding-left: 10px;
+  width: 100px;
+  float: left;
+}
+
+.titles{
+  padding-left: 10px;
+  width: 100px;
+  float: left;
+}
+
+.info-input{
+  height: 50px;
+}
+
+
+.info-input1{
+   line-height: 15px;
+    border-top: 8px solid #ccc;
+  height: 50px;
+}
+.info{
+  color: #777;
+}

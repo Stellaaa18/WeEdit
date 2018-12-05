@@ -1,0 +1,43 @@
+/* pages/me/me.wxss */
+
+.contianer{
+
+
+height: 60px;
+padding: 10px;
+
+
+}
+
+#item-test{
+
+color:deeppink;
+font-family: 'Times New Roman';
+padding-top:10px;
+padding-bottom: 10px;
+
+}
+
+
+.sub-view{
+
+color:#777;
+padding-top:10px;
+padding-bottom: 10px;
+
+}
+
+
+.view-row{
+dislay:flex;
+flex-direction: row;
+}
+
+.view-item{
+display: flex;
+align-items: center;  /**横纵向居中*/
+justify-content: center;
+padding:5px;
+margin:5px;   
+
+}

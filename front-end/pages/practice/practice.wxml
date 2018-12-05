@@ -1,0 +1,14 @@
+<view class="search-header">
+     <input class="search-input"/>
+     <view class="search-btn">搜索</view>
+    </view>
+
+
+    <view>
+      <view wx:for="{{list}}">
+    
+      </view>
+
+
+
+    </view> 

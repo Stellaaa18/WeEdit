@@ -1,0 +1,31 @@
+/* pages/Vote/Vote.wxss */
+page{background: #f4f4f4;}
+.ad_popArea{ width: 708rpx;  height:400rpx;font-size:30rpx;padding: 20rpx; box-sizing: border-box; -webkit-box-sizing: border-box; line-height: 40rpx; color: #333; background: #fff; }
+
+.textset{
+
+font-size:40rpx;
+}
+
+
+.textset1{
+  margin-top:5px;
+color:#ccc;
+font-size: 28rpx;
+  border-bottom: 1px solid #ccc;
+}
+.ad_popFt{ margin: 20rpx ; margin-top: 50rpx;}
+.informBtn{background: #09bb07;color: #fff;font-size: 34rpx; margin-top: 38rpx;height: 88rpx;}
+
+
+.checkbox{
+  
+    display:block;
+    margin-left:10px;
+    margin-top:5px;
+    font-size:35rpx;
+    
+}
+
+
+

@@ -1,0 +1,194 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+  <!-- 搜索 begin -->
+  <view class="search-wrapper">
+    <view class="search-input" bindtap="showMask">
+      <text class="search-input-text">搜索相关文章</text>
+    </view>
+  </view>
+  <scroll-view scroll-y="true">
+    <view class="text-list">
+      <view class="item" wx:for="{{textlist}}">
+        <!-- first row -->
+        <view class="header">
+          <text class="textTitle" url='../viewer/viewer?textId={{item.textId}}'>{{item.textTitle}}</text>
+        </view>
+        <!-- second row -->
+        <view class="footer">
+          <view class="summary">{{item.textAuthor}} {{item.textDate}}</view>
+          <!-- <view class="summary">柯奇豪 2018.11.29</view> -->
+          <!-- edit and delete button -->
+          <view class="operation">
+            <view class="list-container" data-index="{{index}}" bindtap="edit">
+              <image src="../../../images/icon_edit.png" />
+              <navigator class='link' url='../viewer/viewer?textId={{item.textId}}'>编辑</navigator>
+              <!-- <navigator class='link' url='../viewer/viewer'>编辑</navigator> -->
+            </view>
+            <view class="list-container" data-index="{{index}}" bindtap="delete">
+              <image src="../../../images/icon_delete.png" />
+              <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.textTitle}}' data-index='{{index}}'>删除</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+        <view class="item">
+          <!-- //wx:for="{{textlist}}"> //first row -->
+          <view class="header">
+            <!-- <text class="textTitle">{{item.textTitle}}</text> -->
+            <text class="textTitle">这里需要一个测试</text>
+          </view>
+          <!-- //second row -->
+          <view class="footer">
+            <!-- <view class="summary">{{item.textAuthor}} {{item.textDate}}</view> -->
+            <view class="summary">柯奇豪 2018.11.29</view>
+            <!-- //edit and delete button -->
+            <view class="operation">
+              <view class="list-container" data-index="{{index}}" bindtap="edit">
+                <image src="../../../images/icon_edit.png" /> 
+                <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+                <navigator class='link' url='../viewer/viewer'>编辑</navigator>
+              </view>
+              <view class="list-container" data-index="{{index}}" bindtap="delete">
+                <image src="../../../images/icon_delete.png" /> 
+                <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+            <text>删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      <view class="item">
+          <!-- //wx:for="{{textlist}}"> //first row -->
+          <view class="header">
+            <!-- <text class="textTitle">{{item.textTitle}}</text> -->
+            <text class="textTitle">这里需要一个测试</text>
+          </view>
+          <!-- //second row -->
+          <view class="footer">
+            <!-- <view class="summary">{{item.textAuthor}} {{item.textDate}}</view> -->
+            <view class="summary">柯奇豪 2018.11.29</view>
+            <!-- //edit and delete button -->
+            <view class="operation">
+              <view class="list-container" data-index="{{index}}" bindtap="edit">
+                <image src="../../../images/icon_edit.png" /> 
+                <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+                <navigator class='link' url='../editor/editor'>编辑</navigator>
+              </view>
+              <view class="list-container" data-index="{{index}}" bindtap="delete">
+                <image src="../../../images/icon_delete.png" /> 
+                <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+            <text>删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="item">
+          <!-- //wx:for="{{textlist}}"> //first row -->
+          <view class="header">
+            <!-- <text class="textTitle">{{item.textTitle}}</text> -->
+            <text class="textTitle">这里需要一个测试</text>
+          </view>
+          <!-- //second row -->
+          <view class="footer">
+            <!-- <view class="summary">{{item.textAuthor}} {{item.textDate}}</view> -->
+            <view class="summary">柯奇豪 2018.11.29</view>
+            <!-- //edit and delete button -->
+            <view class="operation">
+              <view class="list-container" data-index="{{index}}" bindtap="edit">
+                <image src="../../../images/icon_edit.png" /> 
+                <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+                <navigator class='link' url='../editor/editor'>编辑</navigator>
+              </view>
+              <view class="list-container" data-index="{{index}}" bindtap="delete">
+                <image src="../../../images/icon_delete.png" /> 
+                <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+            <text>删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="item">
+          <!-- //wx:for="{{textlist}}"> //first row -->
+          <view class="header">
+            <!-- <text class="textTitle">{{item.textTitle}}</text> -->
+            <text class="textTitle">这里需要一个测试</text>
+          </view>
+          <!-- //second row -->
+          <view class="footer">
+            <!-- <view class="summary">{{item.textAuthor}} {{item.textDate}}</view> -->
+            <view class="summary">柯奇豪 2018.11.29</view>
+            <!-- //edit and delete button -->
+            <view class="operation">
+              <view class="list-container" data-index="{{index}}" bindtap="edit">
+                <image src="../../../images/icon_edit.png" /> 
+                <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+                <navigator class='link' url='../editor/editor'>编辑</navigator>
+              </view>
+              <view class="list-container" data-index="{{index}}" bindtap="delete">
+                <image src="../../../images/icon_delete.png" /> 
+                <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+            <text>删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="item">
+          <!-- //wx:for="{{textlist}}"> //first row -->
+          <view class="header">
+            <!-- <text class="textTitle">{{item.textTitle}}</text> -->
+            <text class="textTitle">这里需要一个测试</text>
+          </view>
+          <!-- //second row -->
+          <view class="footer">
+            <!-- <view class="summary">{{item.textAuthor}} {{item.textDate}}</view> -->
+            <view class="summary">柯奇豪 2018.11.29</view>
+            <!-- //edit and delete button -->
+            <view class="operation">
+              <view class="list-container" data-index="{{index}}" bindtap="edit">
+                <image src="../../../images/icon_edit.png" /> 
+                <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+                <navigator class='link' url='../editor/editor'>编辑</navigator>
+              </view>
+              <view class="list-container" data-index="{{index}}" bindtap="delete">
+                <image src="../../../images/icon_delete.png" /> 
+                <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+            <text>删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="item">
+          <!-- //wx:for="{{textlist}}"> //first row -->
+          <view class="header">
+            <!-- <text class="textTitle">{{item.textTitle}}</text> -->
+            <text class="textTitle">这里需要一个测试</text>
+          </view>
+          <!-- //second row -->
+          <view class="footer">
+            <!-- <view class="summary">{{item.textAuthor}} {{item.textDate}}</view> -->
+            <view class="summary">柯奇豪 2018.11.29</view>
+            <!-- //edit and delete button -->
+            <view class="operation">
+              <view class="list-container" data-index="{{index}}" bindtap="edit">
+                <image src="../../../images/icon_edit.png" /> 
+                <!-- <navigator class='link' url='../operation/operation?areaId={{item.areaID}}'>编辑</navigator> -->
+                <navigator class='link' url='../editor/editor'>编辑</navigator>
+              </view>
+              <view class="list-container" data-index="{{index}}" bindtap="delete">
+                <image src="../../../images/icon_delete.png" /> 
+                <!-- <text class='link' bindtap='deleteText' data-areaid='{{item.textId}}' data-areaname='{{item.areaText}}' data-index='{{index}}'> -->
+            <text>删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+  </scroll-view>
+  <button class="editor-submit-btn" bindtap='addText'>添加文章</button>
+  </view>

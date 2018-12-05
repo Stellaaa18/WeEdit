@@ -1,0 +1,114 @@
+/* pages/list/list.wxss */
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.container{
+  padding:100rpx 0;
+}
+
+.search-wrapper{
+  width: 750rpx;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.search-input{
+  width: 700rpx;
+  height: 70rpx;
+  margin: 15rpx 20rpx;
+  display: inline-block;
+  vertical-align: middle;
+  background: #F6F6F6;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  color: #cdcdcd;
+}
+
+.editor-submit-btn {
+  background: #409eff;
+  /* width: 700rpx;  */
+  width:100%; 
+  bottom:0;
+  position:fixed;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  color:#fff;
+}
+
+.editor-submit-btn::before, .editor-submit-btn::after {
+  border: none;
+}
+
+/*文章列表包装容器*/
+.text-list {
+	/* margin-bottom: 56px; */
+  width:750rpx;
+}
+
+.item {
+	margin-bottom: 20rpx;
+	background: #fff;
+	padding: 20rpx;
+}
+
+/* item列表的第一行 */
+.item .header {
+	font-size: 40rpx;
+	color: #333;
+	line-height: 72rpx;
+}
+
+.item .header text {
+	margin-right: 40rpx;
+  padding: 5rpx;
+}
+
+.item .footer {
+	border-top: 1px solid #ccc;
+	font-size: 30rpx;
+	color: #999;
+	padding-left: 10rpx;
+	padding-top: 10rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*编辑与删除操作*/
+.item .footer .operation {
+	display: flex;
+}
+
+.item .footer .operation .list-container {
+	display: flex;
+	align-items: center;
+}
+
+.item .footer .operation .list-container image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.item .footer .operation .list-container text {
+	margin-left: 10rpx;
+}
+
+.item .footer .summary{
+  display:flex;
+  align-items:center;
+}

@@ -1,0 +1,85 @@
+ 
+ 
+ <view class="content">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="{{interval}}" duration="{{duration}}">
+<block wx:for="{{imgUrls}}">
+<swiper-item>
+<image src="{{item}}" class="slide-image"/>
+</swiper-item>
+</block>
+ </swiper>
+   </view>
+   <!--流动图片设置-->
+ 
+
+<view class="nav">
+  <view class="nav-item">
+     <view>
+     
+ <button style='display:inline;' bindtap='messageBtn'  >  <image src="/image/海报/消息.png" style="width:25px;height:23px;" > </image> </button>
+     
+     </view>
+     <view>发布通知</view></view>
+
+  <view class="nav-item">
+   <navigator  style='display:inline;' url="/pages/Vote/Vote">
+     <view><image src="/image/海报/共享编辑.png" style="width:25px;height:23px;"></image></view>
+    </navigator>
+     <view>共享编辑</view></view>
+
+ <view class="nav-item">
+ <navigator  style='display:inline;' url="/pages/Sign/Sign">
+  <view><image src="/image/海报/签到 (1).png" style="width:25px;height:23px;"></image></view>
+    
+ </navigator>
+     <view>签到</view></view>
+
+     <view class="hr"></view>
+ </view>
+
+
+<view class="nav">
+ <view class="nav-item">
+ <navigator  style='display:inline;' url="/pages/Votes/Votes">
+     <view><image src="/image/海报/投票.png" style="width:25px;height:23px;"></image></view>
+    </navigator>
+     <view>投票</view></view>
+
+      <view class="nav-item">
+      <navigator  style='display:inline;' url="/pages/publish/publish">
+     <view><image src="/image/海报/想法.png" style="width:25px;height:23px;"></image></view>
+     </navigator>
+     <view>想法</view></view>
+
+
+   <view class="hr"></view>
+ </view>
+
+
+
+   <view class="head">
+     <view>近期动态</view>
+      <view class="right"></view>
+     </view>
+
+
+
+
+
+<view class="list">
+ <block wx:for="{{array}}">
+       <view class="item" bindtap="seeDetail" id="0">
+             <view>
+            <image src="{{item.img}}" style="width:45px;height:40px;"></image>
+             </view>
+             <view class="desc">
+                <view class="title">{{item.title}}</view>
+                    <view class="count">
+                      <view>{{item.type}}</view>
+                      <view class="pinglun">{{item.pinglun}}</view>
+                   </view>
+                      </view>
+                   </view>
+                   <view class="hr2"></view>
+                   </block>
+        </view>

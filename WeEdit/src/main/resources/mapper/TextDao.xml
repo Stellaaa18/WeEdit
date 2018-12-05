@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.test.dao.TextDao">
+    <select id="queryText" resultType="com.test.test.entity.Text">
+        SELECT *
+        FROM  weedit_text
+        ORDER BY textDate
+        DESC
+    </select>
+
+    <select id="queryTextContentById" resultType="com.test.test.entity.TextContent">
+        SELECT *
+        FROM  weedit_content
+        WHERE
+        text_id=#{textId} AND text_content_id=#{textContentId}
+    </select>
+    <select id="queryTextCommentById" resultType="com.test.test.entity.TextComment">
+        SELECT *
+        FROM  weedit_comment
+        WHERE
+        text_id=#{textId} AND text_comment_id=#{textCommentId}
+    </select>
+    <insert id="insertText" useGeneratedKeys="true" keyProperty="textId"
+            keyColumn="text_id" parameterType="com.test.test.entity.Text">
+        INSERT INTO
+        weedit_text(text_title,text_date,
+        text_update_date,text_author_id)
+        VALUE
+        (#{textTitle},#{textDate},#{textUpdateDate},#{textAuthorId})
+    </insert>
+    <insert id="insertTextContent" useGeneratedKeys="true" keyProperty="contentId"
+            keyColumn="content_id" parameterType="com.test.test.entity.TextContent">
+        INSERT INTO
+        weedit_content(content_about,text_id,
+        content_type)
+        VALUE
+        (#{contentAbout},#{textId},#{contentType})
+    </insert>
+    <insert id="insertTextComment" useGeneratedKeys="true" keyProperty="commentId"
+            keyColumn="comment_id" parameterType="com.test.test.entity.TextComment">
+        INSERT INTO
+        weedit_comment(comment_content,comment_date,
+        comment_editor_id,text_id)
+        VALUE
+        (#{commentContent},#{commentDate},#{commentEditorId},#{textId})
+    </insert>
+    <delete id="deleteText" parameterType="com.test.test.entity.Text">
+        DELETE FROM
+        weedit_text
+        WHERE text_id = #{textId}
+    </delete>
+    <delete id="deleteTextContent" parameterType="com.test.test.entity.TextContent">
+        DELETE FROM
+        weedit_content
+        WHERE content_id = #{contentId}
+    </delete>
+    <delete id="deleteTextComment" parameterType="com.test.test.entity.TextComment">
+        DELETE FROM
+        weedit_comment
+        WHERE comment_id = #{commentId}
+    </delete>
+    <update id="updateText" parameterType="com.test.test.entity.Text">
+        UPDATE weedit_text
+        <set>
+            <if test="textTitle != null">text_title = #{textTitle}</if>
+            <if test="textUpdateDate != null">,text_update_date = #{textUpdateDate}</if>
+        </set>
+        WHERE text_id = #{textId}
+    </update>
+    <update id="updateTextContent" parameterType="com.test.test.entity.TextContent">
+        UPDATE weedit_content
+        <set>
+            <if test="contentAbout != null">content_about = #{contentAbout}</if>
+        </set>
+        WHERE content_id = #{contentId}
+    </update>
+</mapper>

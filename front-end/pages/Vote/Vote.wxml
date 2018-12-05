@@ -1,0 +1,25 @@
+<!--pages/Vote/Vote.wxml-->
+
+
+<view class="textset">对本次任务的评价:</view>
+
+
+
+<view class="textset1"> <text space="emsp">admin      2018-11-16 19:00      8人已读</text> </view>
+
+
+<checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for-items="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</checkbox-group>
+
+
+<view class="ad_popFt">
+<form bindsubmit="goDetail" >
+<textarea class="ad_popArea" bindinput="commentTxtFn" 
+      
+       placeholder="请输入留言内容"  placeholder-style="color:#cccccc;" name="textarea" />
+
+ <button class="informBtn" form-type="submit">确认发布</button>
+</form></view>
